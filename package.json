@@ -1,5 +1,5 @@
 {
-  "name": "responsive-clickable-area-map",
+  "name": "@inotom/responsive-clickable-area-map",
   "version": "1.0.0",
   "description": "A clickable area map script for responsive web design.",
   "main": "dist/responsive-clickable-area-map.umd.js",
