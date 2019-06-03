@@ -1,0 +1,45 @@
+{
+  "name": "responsive-clickable-area-map",
+  "version": "1.0.0",
+  "description": "A clickable area map script for responsive web design.",
+  "main": "dist/responsive-clickable-area-map.umd.js",
+  "cdn": "dist/responsive-clickable-area-map.min.js",
+  "config": {
+    "dist_dir": "dist",
+    "src_dir": "src"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
+    "prebuild": "rimraf $npm_package_config_dist_dir/responsive-clickable-area-map.* && npm run clean && npm test",
+    "build": "NODE_ENV=production webpack -p --config config/webpack.prod.js",
+    "clean": "rimraf '**/.DS_Store'",
+    "lint": "eslint $npm_package_config_src_dir",
+    "prettier": "prettier --write 'src/**/*.js'",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inotom/responsive-clickable-area-map.git"
+  },
+  "keywords": [],
+  "author": "inotom (https://www.serendip.ws/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inotom/responsive-clickable-area-map/issues"
+  },
+  "homepage": "https://github.com/inotom/responsive-clickable-area-map#readme",
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@babel/preset-env": "7.4.5",
+    "babel-eslint": "10.0.1",
+    "babel-loader": "8.0.6",
+    "eslint": "5.16.0",
+    "prettier": "1.17.1",
+    "rimraf": "2.6.3",
+    "terser-webpack-plugin": "1.3.0",
+    "webpack": "4.32.2",
+    "webpack-cli": "3.3.2",
+    "webpack-dev-server": "3.5.1",
+    "webpack-merge": "4.2.1"
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>@inotom/responsive-clickable-area-map Demo</title>
+<style>
+html {
+  font-size: 62.5%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+</head>
+<body>
+
+<h1>@inotom/responsive-clickable-area-map Demo</h1>
+
+<img src="areamap.png" alt="" usemap="#my-map">
+<map name="my-map">
+  <area shape="rect" coords="62,65,185,187" href="#" alt="">
+  <area shape="circle" coords="311,290,73" href="#" alt="">
+  <area shape="poly" coords="564,91,539,140,477,153,519,199,510,261,566,231,618,260,609,200,653,154,592,146,592,146" href="#" alt="">
+</map>
+
+<script src="responsive-clickable-area-map.min.js"></script>
+<script>
+ResponsiveClickableAreaMap.responsiveClickableAreaMap('img[usemap]');
+</script>
+</body>
+</html>
