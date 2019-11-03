@@ -23,8 +23,9 @@ const _config = merge(common, {
       new TerserPlugin({
         sourceMap: true,
         parallel: true,
+        extractComments: false,
         terserOptions: {
-          ecma: 8,
+          ecma: 5,
         },
       }),
     ],
